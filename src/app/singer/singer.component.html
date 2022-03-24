@@ -1,0 +1,15 @@
+<button (click)="toggleShow()" type="checkbox">Show Singer</button>
+<div>
+
+</div>
+<div *ngIf="isShown" class="row container-fluid" id="divshow">
+    <p>FirstName: {{egorKreed.FirstName}}</p>
+    <p>LastName: {{egorKreed.LastName}}</p>
+    <p>Age: {{egorKreed.Age}}</p>
+    <label>Songs:
+        <ul>
+            <li *ngFor="let s of songs">{{s}}</li>
+        </ul>
+    </label>
+    <img src="{{egorKreed.Photo}}" width="200" height="200">
+</div>
